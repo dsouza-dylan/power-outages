@@ -61,19 +61,23 @@ Here's the head of the cleaned DataFrame (limited to a few columns):
 - Most common cause: Severe weather
 - Most affected season: Summer
 
-The distribution of outage durations shows a right-skewed pattern with most outages lasting under 2,000 minutes, but with a long tail of extended outages. The median duration of 1,740 minutes (29 hours) indicates that half of all outages are resolved within roughly a day, while the mean being higher suggests some extremely long-duration events significantly impact the average.
+The distribution of outage durations shows a right-skewed pattern with most outages lasting under 4,000 minutes, but with a long tail of extended outages. The median duration of 701 minutes indicates that half of all outages are resolved within a day's time, while the mean being higher suggests some extremely long-duration events significantly impact the average.
 
 <iframe src="assets/fig1.html" width=800 height=600 frameBorder=0></iframe>
+
+Generally, this data seems to lack instances of small-scale outages, but does have a lot of missing/unclassified data.
+
 <iframe src="assets/fig2.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/fig3.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/fig4.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/fig5.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Bivariate Analysis
 
 Analysis of outage duration by cause category reveals significant differences between causes. Severe weather events tend to produce the longest outages with the highest variability, while intentional attacks typically result in shorter, more predictable durations. Equipment failures show moderate duration with less variability than weather events.
 
 The relationship between customers affected and outage duration shows a weak positive correlation, suggesting that larger outages don't necessarily last longer. This indicates that the scope and duration of outages are influenced by different factors - scope likely depends on grid interconnectedness and population density, while duration depends more on the nature of the damage and repair complexity.
+
+<iframe src="assets/fig3.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/fig4.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/fig5.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Interesting Aggregates
 

@@ -154,7 +154,7 @@ I investigated whether the missingness of `CAUSE.CATEGORY.DETAIL` depends on oth
 - Observed difference: 2,067 minutes (Weather outages last ~34.5 hours longer on average)
 - P-value: 0.000 (from 10,000 permutations)
 
-<iframe src="https://dsouza-dylan.github.io/power-outages/assets/permutation_test_histogram.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/permutation_test_histogram.html" width=800 height=600 frameBorder=0></iframe>
 
 **Conclusion**: With a p-value much less than 0.05, we reject the null hypothesis. There is strong statistical evidence that severe weather outages last significantly longer than equipment failure outages on average. This makes practical sense as weather damage often affects larger areas and requires more complex repairs than localized equipment failures.
 
@@ -274,8 +274,6 @@ The Random Forest approach with proper hyperparameter tuning provides better gen
 
 **Conclusion**: With a p-value of 0.7018, which is much greater than 0.05, we fail to reject the null hypothesis. There is insufficient evidence to conclude that the model performs unfairly across different urbanization levels. The model appears to achieve fairness parity between high and low urbanization areas for predicting long-duration outages.
 
-This finding suggests that the model's predictions are not systematically biased against either urban or rural communities, which is important for equitable utility planning and emergency response resource allocation.
-
 ---
 
 ## Conclusion
@@ -285,6 +283,3 @@ This analysis successfully developed a machine learning model capable of predict
 1. **Severe weather is the dominant factor** in both outage frequency and severity
 2. **Geographic and demographic factors** significantly influence outage patterns
 3. **The final Random Forest model** demonstrates both good performance and fairness across different community types
-4. **Early prediction capability** could help utilities better allocate emergency response resources
-
-The model provides a foundation for improved grid resilience planning and emergency preparedness, with potential applications in resource allocation, customer communication, and infrastructure investment prioritization.

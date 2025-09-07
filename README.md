@@ -45,13 +45,13 @@ Created additional derived features to enhance analysis:
 
 Here's the head of the cleaned DataFrame:
 
-| OBS | YEAR | MONTH | U.S._STATE | ANOMALY.LEVEL | CLIMATE.CATEGORY | OUTAGE.START.DATE | CUSTOMERS.AFFECTED | OUTAGE.DURATION |
-|-----|------|-------|------------|---------------|------------------|-------------------|--------------------|-----------------|
-| 1   | 2011 | 7     | Minnesota  | -0.3 | normal | 2011-07-01 | 70000.0 | 3060 |
-| 2   | 2014 | 5     | Minnesota  | -0.1 | normal | 2014-05-11 | 68200.0 | 1 |
-| 3   | 2010 | 10    | Minnesota  | -1.5 | cold | 2010-10-26 | 70000.0 | 3000 |
-| 4   | 2012 | 6     | Minnesota  | -0.1 | normal | 2012-06-19 | 68200.0 | 2550 |
-| 5   | 2015 | 7     | Minnesota  | 1.2 | warm | 2015-07-18 | 250000.0 | 1740 |
+| OBS | YEAR | MONTH | U.S._STATE | ANOMALY.LEVEL | CUSTOMERS.AFFECTED | OUTAGE.DURATION |
+|-----|------|-------|------------|---------------|--------------------|-----------------|
+| 1   | 2011 | 7     | Minnesota  | -0.3 | 70000.0 | 3060 |
+| 2   | 2014 | 5     | Minnesota  | -0.1 | 68200.0 | 1 |
+| 3   | 2010 | 10    | Minnesota  | -1.5 | 70000.0 | 3000 |
+| 4   | 2012 | 6     | Minnesota  | -0.1 | 68200.0 | 2550 |
+| 5   | 2015 | 7     | Minnesota  | 1.2 | 250000.0 | 1740 |
 
 ### Univariate Analysis
 

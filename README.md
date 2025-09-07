@@ -43,7 +43,7 @@ Created additional derived features to enhance analysis:
 - **SEVERITY_CATEGORY**: Classified outages as "Small" (<10K customers), "Medium" (10K-100K), "Large" (>100K), or "Unknown/Minor"
 - **IS_EXTREME_WEATHER**: Boolean flag for weather-related causes
 
-Here's the head of the cleaned DataFrame:
+Here's the head of the cleaned DataFrame (limited to a few columns):
 
 | OBS | YEAR | MONTH | U.S._STATE | ANOMALY.LEVEL | CUSTOMERS.AFFECTED | OUTAGE.DURATION |
 |-----|------|-------|------------|---------------|--------------------|-----------------|

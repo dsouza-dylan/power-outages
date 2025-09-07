@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.18.0/plotly.min.js"></script>
+    <title>Distribution of Outage Severity</title>
+</head>
+<body>
+    <div id="plotDiv" style="width:100%;height:500px;"></div>
+    
+    <script>
+        // Data based on severity categories from your analysis
+        const trace = {
+            type: 'pie',
+            labels: ['Unknown/Minor', 'Medium', 'Small', 'Large'],
+            values: [650, 420, 310, 154], // Approximate values based on your data distribution
+            marker: {
+                colors: ['#8FD9A8', '#A8DADC', '#F1FAEE', '#E63946']
+            },
+            textinfo: 'label+percent',
+            textposition: 'inside',
+            hovertemplate: '<b>%{label}</b><br>' +
+                          'Count: %{value}<br>' +
+                          'Percentage: %{percent}<br>' +
+                          '<extra></extra>'
+        };
+
+        const layout = {
+            title: {
+                text: 'Distribution of Outage Severity',
+                font: { size: 18 }
+            },
+            showlegend: true,
+            legend: {
+                orientation: 'v',
+                x: 1.02,
+                y: 0.5
+            },
+            margin: { t: 50, b: 50, l: 50, r: 150 },
+            annotations: [{
+                text: 'Severity Categories:<br>' +
+                      '• Unknown/Minor: 0 customers<br>' +
+                      '• Small: <10K customers<br>' +
+                      '• Medium: 10K-100K customers<br>' +
+                      '• Large: >100K customers',
+                showarrow: false,
+                x: 0.02,
+                y: 0.02,
+                xref: 'paper',
+                yref: 'paper',
+                align: 'left',
+                font: { size: 10 }
+            }]
+        };
+
+        const config = {
+            responsive: true,
+            displayModeBar: false
+        };
+
+        Plotly.newPlot('plotDiv', [trace], layout, config);
+    </script>
+</body>
+</html>

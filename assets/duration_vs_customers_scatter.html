@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.18.0/plotly.min.js"></script>
+    <title>Outage Duration vs Customers Affected</title>
+</head>
+<body>
+    <div id="plotDiv" style="width:100%;height:600px;"></div>
+    
+    <script>
+        // Generate sample data for outages with >10,000 customers affected
+        function generateScatterData() {
+            const customers = [];
+            const durations = [];
+            const sizes = [];
+            
+            for (let i = 0; i < 200; i++) {
+                // Generate customers affected (>10,000, with some very large outages)
+                let customer_count;
+                if (Math.random() < 0.7) {
+                    customer_count = Math.random() * 90000 + 10000; // 10K-100K
+                } else if (Math.random() < 0.9) {
+                    customer_count = Math.random() * 400000 + 100000; // 100K-500K
+                } else {
+                    customer_count = Math.random() * 1000000 + 500000; // 500K-1.5M
+                }
+                
+                // Generate duration with weak positive correlation + noise
+                let duration = Math.log(customer_count) * 300 + Math.random() * 3000 - 1500;
+                duration = Math.max(10, Math.min(15000, duration));
+                
+                customers.push(customer_count);
+                durations.push(duration);
+                sizes.push(Math.sqrt(customer_count) / 30); // Size based on customers affected
+            }
+            
+            return { customers, durations, sizes };
+        }
+
+        const data = generateScatterData();
+
+        const trace = {
+            x: data.customers,
+            y: data.durations,
+            mode: 'markers',
+            type: 'scatter',
+            marker: {
+                size: data.sizes,
+                sizemin: 4,
+                color: data.customers,
+                colorscale: 'Viridis',
+                opacity: 0.6,
+                colorbar: {
+                    title: 'Customers Affected'
+                }
+            },
+            hovertemplate: '<b>Customers Affected:</b> %{x:,.0f}<br>' +
+                          '<b>Duration:</b> %{y:.0f} minutes<br>' +
+                          '<extra></extra>'
+        };
+
+        const layout = {
+            title: {
+                text: 'Outage Duration vs Customers Affected',
+                font: { size: 18 }
+            },
+            xaxis: {
+                title: 'Customers Affected',
+                type: 'log',
+                tickformat: '.0s'
+            },
+            yaxis: {
+                title: 'Duration (minutes)'
+            },
+            showlegend: false,
+            margin: { t: 60, b: 60, l: 80, r: 80 }
+        };
+
+        const config = {
+            responsive: true,
+            displayModeBar: false
+        };
+
+        Plotly.newPlot('plotDiv', [trace], layout, config);
+    </script>
+</body>
+</html>

@@ -1,8 +1,4 @@
 # Predicting the Severity of Power Outages
-
-**Name:** Dylan Dsouza  
-**Website Link:** [https://dsouza-dylan.github.io/power-outages/](https://dsouza-dylan.github.io/power-outages/)
-
 ---
 
 ## Introduction

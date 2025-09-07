@@ -73,11 +73,15 @@ Generally, this data seems to lack instances of small-scale outages, but does ha
 
 Analysis of outage duration by cause category reveals significant differences between causes. Severe weather events tend to produce the longest outages with the highest variability, while intentional attacks typically result in shorter, more predictable durations. Equipment failures show moderate duration with less variability than weather events.
 
+<iframe src="assets/fig4.html" width=800 height=600 frameBorder=0></iframe>
+
 The relationship between customers affected and outage duration shows a weak positive correlation, suggesting that larger outages don't necessarily last longer. This indicates that the scope and duration of outages are influenced by different factors - scope likely depends on grid interconnectedness and population density, while duration depends more on the nature of the damage and repair complexity.
 
-<iframe src="assets/fig3.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/fig4.html" width=800 height=600 frameBorder=0></iframe>
 <iframe src="assets/fig5.html" width=800 height=600 frameBorder=0></iframe>
+
+I also plotted the seasonality to ascertain whether it made a difference in terms of outage distribution.
+
+<iframe src="assets/fig3.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Interesting Aggregates
 

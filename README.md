@@ -64,10 +64,10 @@ Here's the head of the cleaned DataFrame:
 The distribution of outage durations shows a right-skewed pattern with most outages lasting under 2,000 minutes, but with a long tail of extended outages. The median duration of 1,740 minutes (29 hours) indicates that half of all outages are resolved within roughly a day, while the mean being higher suggests some extremely long-duration events significantly impact the average.
 
 <iframe src="assets/fig1.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="https://dsouza-dylan.github.io/power-outages/assets/fig2.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="https://dsouza-dylan.github.io/power-outages/assets/fig3.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="https://dsouza-dylan.github.io/power-outages/assets/fig4.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="https://dsouza-dylan.github.io/power-outages/assets/fig5.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/fig2.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/fig3.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/fig4.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/fig5.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Bivariate Analysis
 
